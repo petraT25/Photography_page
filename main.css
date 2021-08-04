@@ -1,0 +1,693 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background-color: #ee3453;
+}
+
+::selection {
+  background-color: #ee3453;
+}
+
+/*NAVIGATION*/
+.brand-name {
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: white;
+  text-shadow: 3px 2px #ee3453;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  z-index: 100000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.nav {
+  background-color: rgba(42, 12, 12, 0.843);
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  z-index: 9999999;
+}
+
+.nav.show {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+  z-index: 99999999999;
+  position: fixed;
+}
+
+.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  z-index: 999999999999;
+}
+
+.nav-items li {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  list-style-type: none;
+  z-index: 999999999999;
+}
+
+.nav-items li a {
+  color: #fff !important;
+  text-decoration: none;
+  z-index: 999999;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.nav-items li a:hover {
+  color: #ee3453 !important;
+}
+
+.hamburger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 45px;
+  height: 40px;
+  z-index: 2;
+  border: 3px solid #e6d8d8;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 9999999999;
+}
+
+.hamburger span {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background: #fff;
+  width: 60%;
+  height: 3px;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.top-line.active {
+  -webkit-transform: translateY(4.5px) rotate(45deg);
+          transform: translateY(4.5px) rotate(45deg);
+}
+
+.center-line.active {
+  display: none;
+}
+
+.bottom-line.active {
+  -webkit-transform: translateY(-4.5px) rotate(-45deg);
+          transform: translateY(-4.5px) rotate(-45deg);
+}
+
+/*FRONT BANNER*/
+#welcome-banner {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/photographer3.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-left: 0;
+  z-index: 9999;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(40, 40, 194, 0.353);
+  z-index: 1;
+}
+
+.banner-text {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+#welcome {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.lead {
+  color: white;
+  font-weight: 600;
+  margin: auto;
+  width: 60%;
+}
+
+.btn-wrapper {
+  margin: auto;
+}
+
+.btn {
+  width: 15rem;
+  height: 100%;
+  padding: 1rem 2rem;
+  border: 4px solid rgba(213, 4, 49, 0);
+  -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+          box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+  border-radius: 25rem;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 5rem;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  -webkit-box-shadow: inset 15rem 0 0 0 rgba(57, 42, 48, 0);
+          box-shadow: inset 15rem 0 0 0 rgba(57, 42, 48, 0);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/*GALLERY*/
+.our-work-h, .about-us-h, .contact-h {
+  width: 60%;
+  margin: 1rem;
+  padding: 2rem;
+  border-bottom: 10px solid #ee3453;
+  border-left: 10px solid #ee3453;
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+
+.our-work-div {
+  width: 100vw;
+  margin: auto;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo-container {
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo {
+  width: 100%;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-filter: grayscale(45%);
+          filter: grayscale(45%);
+}
+
+.photo:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+  cursor: pointer;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.photo-div {
+  overflow: hidden;
+}
+
+/*ABOUT US*/
+.about-us-div {
+  width: 100vw;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portraits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.person {
+  position: relative;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  margin-bottom: 5rem;
+}
+
+.person img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.person:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  overflow: hidden;
+  z-index: 5;
+}
+
+.person-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: rgba(43, 40, 50, 0.8);
+  border-radius: 10px;
+}
+
+.person:hover .person-overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.name {
+  color: #fff;
+  text-align: center;
+  margin-top: 50%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.icon:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  color: #ee3453;
+}
+
+.biography {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  float: right;
+  margin: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.biography p {
+  color: white;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+/*CONTACT*/
+.contact-div {
+  width: 100vw;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff !important;
+  width: 100vw;
+  margin-bottom: 5rem;
+  padding: 0;
+}
+
+#contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input[type="text"], input[type="email"] {
+  width: 40vw;
+  height: 5vh;
+  background-color: #232323;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.703);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 40vw;
+  height: 30vh;
+  color: white;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+
+#send {
+  width: 10rem;
+  height: 100%;
+  padding: 1rem;
+  border: 3px solid #ee3453;
+  -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+          box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+  border-radius: 25rem;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+}
+
+#send:hover {
+  -webkit-box-shadow: inset 10rem 0 0 0 rgba(57, 42, 48, 0);
+          box-shadow: inset 10rem 0 0 0 rgba(57, 42, 48, 0);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#scrollButton {
+  float: right;
+  margin: 0 3rem 3rem 0;
+  width: 45px;
+  height: 45px;
+  background-color: #ee3453;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 25%;
+  border: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #welcome {
+    font-size: 3.2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .btn {
+    width: 10rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .btn:hover {
+    -webkit-box-shadow: inset 10rem 0 0 0 rgba(57, 42, 48, 0);
+            box-shadow: inset 10rem 0 0 0 rgba(57, 42, 48, 0);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .our-work-h, .about-us-h, .contact-h {
+    width: 60%;
+    font-size: 1.8rem;
+    border-left: 7px solid #ee3453;
+    border-bottom: 7px solid #ee3453;
+  }
+  input[type="text"], input[type="email"], textarea {
+    width: 70vw;
+  }
+  #send {
+    width: 8rem;
+  }
+  #send:hover {
+    -webkit-box-shadow: inset 8rem 0 0 0 rgba(57, 42, 48, 0);
+            box-shadow: inset 8rem 0 0 0 rgba(57, 42, 48, 0);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .brand-name {
+    font-size: 2.5rem;
+  }
+  .hamburger {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 35px;
+    z-index: 2;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 9999999999;
+  }
+  .nav-items li {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.8rem;
+  }
+  .nav {
+    width: 60%;
+  }
+  #welcome {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 0.7rem;
+  }
+  .btn {
+    width: 6rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem;
+    letter-spacing: normal;
+  }
+  .btn:hover {
+    -webkit-box-shadow: inset 6rem 0 0 0 rgba(57, 42, 48, 0);
+            box-shadow: inset 6rem 0 0 0 rgba(57, 42, 48, 0);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .our-work-div, .about-us-div, .contact-div {
+    height: 30vh;
+  }
+  .our-work-h, .about-us-h, .contact-h {
+    width: 60%;
+    padding: 2rem;
+    border-left: 3px solid #ee3453;
+    border-bottom: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .photo {
+    width: 100%;
+    height: 25vh;
+  }
+  .person {
+    margin-bottom: 3rem;
+  }
+  .person img {
+    height: 25vh;
+  }
+  .person:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .name {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .icon {
+    margin: 0.3rem;
+    font-size: 0.9rem;
+  }
+  .biography p {
+    width: 80%;
+    font-size: 0.7rem;
+  }
+  input[type="text"], input[type="email"] {
+    width: 80vw;
+    height: 5vh;
+  }
+  textarea {
+    width: 80vw;
+    height: 20vh;
+  }
+  #send {
+    width: 7rem;
+    height: 100%;
+    padding: 1rem;
+    border: 3px solid #ee3453;
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.503);
+    border-radius: 25rem;
+    -webkit-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2rem;
+    letter-spacing: normal;
+  }
+  #send:hover {
+    -webkit-box-shadow: inset 7rem 0 0 0 rgba(57, 42, 48, 0);
+            box-shadow: inset 7rem 0 0 0 rgba(57, 42, 48, 0);
+  }
+  #scrollButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .our-work-h, .about-us-h, .contact-h {
+    width: 30%;
+  }
+}

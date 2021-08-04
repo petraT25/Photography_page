@@ -151,6 +151,7 @@ body {
   background-position: center;
   background-size: cover;
   margin-left: 0;
+  margin-right: 0;
   z-index: 9999;
 }
 
@@ -158,6 +159,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(40, 40, 194, 0.353);

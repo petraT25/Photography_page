@@ -596,7 +596,8 @@ textarea {
     margin-top: 0.8rem;
   }
   .nav {
-    width: 60%;
+    width: 60vw;
+    height: 100vh;
   }
   #welcome {
     font-size: 2rem;
